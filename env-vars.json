@@ -1,0 +1,11 @@
+{
+  "WEATHER_FX_URL":"http://partners.wfxtriggers.com/partners/trigger2zips/?resp_type=json",
+  "WEATHER_FX_ACCT_ID":"",
+  "WEATHER_URL":"https://28bf9feb-6df6-4e7f-85b8-e817557cb65a:DHFSGlV9BR@twcservice.mybluemix.net",
+  "CONVERSATION_API_URL": {"expr": "Conversation.*", "field": "credentials.url", "append": "/v1/workspaces/9ef0c2e0-2600-4d70-aa9b-ce7ff35684e0/message?version=2017-05-26"},
+  "CONVERSATION_API_USER": {"expr": "Conversation.*", "field": "credentials.username"},
+  "CONVERSATION_API_PASSWORD": {"expr": "Conversation.*", "field": "credentials.password"},
+  "TONE_API_URL":{"expr": "Tone Analyzer-tu", "field": "credentials.url"},
+  "TONE_API_USER":{"expr": "Tone Analyzer-tu", "field": "credentials.username"},
+  "TONE_API_PASSWORD":{"expr": "Tone Analyzer-tu", "field": "credentials.password"}
+}

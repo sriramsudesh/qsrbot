@@ -1,0 +1,78 @@
+<div id="panel">
+  <br>
+  <br>
+  <div class="row">
+    <hr>
+    <h4 class="title">Locations</h4>
+  </div>
+  <div class="row">
+    <div class="col-xs-6">
+      <div *ngIf="!zipSet">
+        <h4 class="subtitle" style="padding:0px">What is this website?</h4>
+        <p class="sub-text" style="position:relative;top:-30px">
+          This is a prototype demonstration of how Watson Conversation and Tone Analyzer can be used in combination with Weather Insights and WeatherFX to create a personalized ordering chat bot.
+        </p>
+        <div class="row" style="position:relative;top:-30px">
+          <div class="col-xs-6">
+            <img src="assets/ibm_twc.png" style="max-height:50px">
+          </div>
+          <div class="col-xs-6">
+            <img src="assets/ca.png" style="max-height:50px">
+          </div>
+        </div>
+        <p class="sub-text"  style="position:relative;top:-25px">
+          Click the CLICK TO ORDER <i class="fa fa-cutlery" aria-hidden="true"></i> button on the right and enter your zip code to see our WeatherFX API in action!
+          Our WeatherFX API interprets and normalizes past, present and future weather elements, sales and consumer data and creates triggers that define the condition mixes when weather is most likely to drive behavior.
+        </p>
+        <h4 class="subtitle" style="padding:0px">
+          What's this mean for you?
+        </h4>
+        <p class="sub-text"  style="position:relative;top:-30px">
+          It means we can help suggest just the right item to add to your order that complements the weather in your area!
+        </p>
+      </div>
+      <div *ngIf="zipSet">
+        <h4 class="subtitle" style="padding:0px">How you doin {{ weather.zip }}!</h4>
+        <div class="row" style="position:relative;top:-22px">
+          <div class="col-xs-4">
+            <img src="{{ weather.weatherIcon }}" style="max-width:75%">
+            <p class="sub-text" style="padding-left:10px">{{ weather.weatherCurrent.observation.wx_phrase }}</p>
+          </div>
+          <div class="col-xs-8" style="font-size:130%">
+            <p class="sub-text" style="padding:0px">Currently in your area, it's</p>
+            <p class="sub-text" style="font-size:180%;padding:0px"><b>{{ weather.weatherCurrent.observation.temp }}&deg;</b></p>
+          </div>
+        </div>
+        <div class="row" *ngIf="weather.weatherFx.orderTriggers.delivery" [ngClass]="{highlighted: delivery}" style="padding-top:20px;padding-bottom:10px;transition: .8s all;">
+          <div class="col-xs-8">
+            <p class="sub-text"  style="text-align:right">Seems like the traffic and weather indicate delivery time.  But you can still pickup if you'd like!</p>
+          </div>
+          <div class="col-xs-4">
+            <img src="assets/img/delivery.png" style="max-width:70px;float:right;position:relative;top:-10px">
+          </div>
+        </div>
+        <div class="row" *ngIf="weather.weatherFx.orderTriggers.dineIn" [ngClass]="{highlighted: dineIn}" style="padding-top:20px;padding-bottom:10px;transition: .8s all;">
+          <div class="col-xs-8">
+            <p class="sub-text" style="text-align:right">Seems like the traffic and weather indicate a good time to come pickup.  But you can still get delivery if you'd like!</p>
+          </div>
+          <div class="col-xs-4">
+            <img src="assets/img/takeout.png" style="max-width:70px;float:right;position:relative;top:-10px">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-6" id="location">
+      <h4 class="subtitle">Our Restaurants Near You</h4>
+      <div style="position:relative;top:-15px">
+        <iframe
+          width="380"
+          height="280"
+          frameborder="0" style="border:0"
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyArgg97Dj-6C7Ndrhpc_P_vbrDagaAFNr4&q=burgers,Princeton+NJ" allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+</div>

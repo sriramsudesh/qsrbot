@@ -1,0 +1,54 @@
+#title{
+  font-family:HelveticaNeueIBMLight, Helvetica, Arial, sans-serif;
+  font-size:50px;
+  text-align:left;
+  color:white;
+  margin-top:0px;
+}
+
+#textBackground{
+  background-color:rgba(48, 53, 56, 0.66);
+  -webkit-box-shadow: 0px 0px 73px 25px rgba(48, 53, 56, 0.72);
+  -moz-box-shadow: 0px 0px 73px 25px rgba(48, 53, 56, 0.72);
+  box-shadow: 0px 0px 73px 25px rgba(48, 53, 56, 0.72);
+}
+
+#subtitle{
+  font-family: HelveticaNeueIBMLight, Helvetica, Arial, sans-serif;
+	font-size: 17px;
+	font-style: normal;
+	font-variant: small-caps;
+  text-align:left;
+  color:white;
+}
+
+#background{
+  background-image: url("/assets/img/restaurant2.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width:100%;
+  height:480px;
+  z-index: 1;
+  -webkit-box-shadow: inset -19px 0px 38px -12px rgba(0,0,0,1);
+  -moz-box-shadow: inset -19px 0px 38px -12px rgba(0,0,0,1);
+  box-shadow: inset -19px 0px 38px -12px rgba(0,0,0,1);
+}
+
+.image{
+  width:100%;
+  height:480px;
+}
+
+#bannerText{
+  /*float:right;*/
+  width:400px;
+}
+
+
+hr{
+  border-top: 3px solid #eee;
+}
+
+#banner{
+
+}

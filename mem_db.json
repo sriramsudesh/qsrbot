@@ -1,0 +1,28 @@
+{
+  "ids": {
+    "User": 1,
+    "AccessToken": 192,
+    "ACL": 1,
+    "RoleMapping": 2,
+    "Role": 2,
+    "Auth": 3
+  },
+  "models": {
+    "User": {},
+    "AccessToken": {
+      "HIFavp1fAHivPtoW0qF0JxPgsTEGKBZG5HVsF7uIBWRW5MjLGyDLqKHxhSXLiVV1": "{\"id\":\"HIFavp1fAHivPtoW0qF0JxPgsTEGKBZG5HVsF7uIBWRW5MjLGyDLqKHxhSXLiVV1\",\"ttl\":3600,\"created\":\"2017-09-13T19:37:39.566Z\",\"userId\":2}",
+      "105CD1pQYyeSIOwOQKI4ZfGO9iR4e9LxTDsReESVgltBj4cI51bewNNux7KGtUqc": "{\"id\":\"105CD1pQYyeSIOwOQKI4ZfGO9iR4e9LxTDsReESVgltBj4cI51bewNNux7KGtUqc\",\"ttl\":3600,\"created\":\"2017-09-13T20:11:08.421Z\",\"userId\":2}"
+    },
+    "ACL": {},
+    "RoleMapping": {
+      "1": "{\"principalType\":\"USER\",\"principalId\":\"2\",\"roleId\":1,\"id\":1}"
+    },
+    "Role": {
+      "1": "{\"name\":\"admin\",\"created\":\"2017-06-09T13:55:36.777Z\",\"modified\":\"2017-06-09T13:55:36.777Z\",\"id\":1}"
+    },
+    "Auth": {
+      "1": "{\"username\":\"watson\",\"password\":\"$2a$10$AHvEXtFAfMVTciaPB2g3L.33RS63hy.YL0rQgLbV701jTB3yp05eG\",\"email\":\"watson@ibm.com\",\"id\":1}",
+      "2": "{\"username\":\"admin\",\"password\":\"$2a$10$tkSzSy5s/jg1DNP5DIrQ/OWXGDxjGbc0Pgu3WVNAv/vI1s49N5LD.\",\"email\":\"admin@ibm.com\",\"id\":2}"
+    }
+  }
+}

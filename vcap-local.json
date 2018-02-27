@@ -1,0 +1,66 @@
+{
+  "conversation": [
+    {
+      "credentials": {
+        "url": "https://gateway.watsonplatform.net/conversation/api",
+        "username": "404deb75-ec4a-4f7b-b2ce-8ad57f42378d",
+        "password": "V8XKKgcCzsLs"
+      },
+      "syslog_drain_url": null,
+      "volume_mounts": [],
+      "label": "conversation",
+      "provider": null,
+      "plan": "standard",
+      "name": "cartridges-Conversation-3",
+      "tags": [
+        "watson",
+        "ibm_created",
+        "ibm_dedicated_public",
+        "lite"
+      ]
+    }
+  ],
+  "weatherinsights": [
+    {
+      "credentials": {
+        "username": "28bf9feb-6df6-4e7f-85b8-e817557cb65a",
+        "password": "DHFSGlV9BR",
+        "host": "twcservice.mybluemix.net",
+        "port": 443,
+        "url": "https://28bf9feb-6df6-4e7f-85b8-e817557cb65a:DHFSGlV9BR@twcservice.mybluemix.net"
+      },
+      "syslog_drain_url": null,
+      "volume_mounts": [],
+      "label": "weatherinsights",
+      "provider": null,
+      "plan": "Free-v2",
+      "name": "Weather Company Data-1h",
+      "tags": [
+        "big_data",
+        "ibm_created",
+        "ibm_dedicated_public"
+      ]
+    }
+  ],
+  "tone_analyzer": [
+    {
+      "credentials": {
+        "url": "https://gateway.watsonplatform.net/tone-analyzer/api",
+        "username": "13277595-6654-4401-88a0-64caba7a44c9",
+        "password": "ftrNIk8gtXVH"
+      },
+      "syslog_drain_url": null,
+      "volume_mounts": [],
+      "label": "tone_analyzer",
+      "provider": null,
+      "plan": "standard",
+      "name": "Tone Analyzer-tu",
+      "tags": [
+        "watson",
+        "ibm_created",
+        "ibm_dedicated_public",
+        "lite"
+      ]
+    }
+  ]
+}

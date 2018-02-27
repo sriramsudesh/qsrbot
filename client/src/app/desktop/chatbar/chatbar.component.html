@@ -1,0 +1,14 @@
+<div id="sidebar-wrapper" [class.toggled]="isToggled">
+  <div class="row">
+    <div id="buffer" (click)="toggleSidebar()" [class.toggled]="!isToggled">
+      <div class="rotate">
+        <span popover="Click here to get started!" triggers="" #startPopover="bs-popover" placement="left" container="body"></span>
+        <span *ngIf="!isToggled">CLICK TO CLOSE<i class="fa fa-times-circle" aria-hidden="true" style="margin-left:15px;color:white"></i></span>
+        <span *ngIf="isToggled">CLICK TO ORDER<i class="fa fa-cutlery" aria-hidden="true" style="margin-left:15px;color:white"></i></span>
+      </div>
+    </div>
+    <div class="col-xs-10" id="chat">
+      <app-chat (orderedItem)="addToOrder($event)" [opened]="!isToggled" (orderType)="setOrderType($event)" (itemHighlighter)="highlight($event)" (weather)="weatherSender($event)"></app-chat>
+    </div>
+  </div>
+</div>

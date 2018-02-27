@@ -1,0 +1,43 @@
+#wrapper {
+    padding-right: 0;
+    margin-top:50px;
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+
+#wrapper.toggled {
+    padding-right: 0px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -330px;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-right: 330px;
+    }
+
+    #wrapper.toggled {
+        padding-right: 0px;
+    }
+
+    #page-content-wrapper {
+        padding: 0px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-left: 0;
+    }
+}

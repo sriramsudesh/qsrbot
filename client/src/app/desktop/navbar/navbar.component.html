@@ -1,0 +1,74 @@
+<nav id="top" class="navbar navbar-fixed-top">
+  <div id="top">
+    <div class="navbar-left" style="height:45px">
+        <img class="navLogo" src="assets/img/mainlogo.png">
+    </div>
+    <div class="navbar-right" id="profile">
+      <p style="margin-top:15px;color:white;margin-bottom:0px;margin-left:10px">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        Log in
+      </p>
+      <span class="sub-text" style="font-size:75%;">create account</span>
+    </div>
+    <div class="navbar-right" id="orderBasket" (click)="openOrderModal()" [ngClass]="{ alerted: alert }">
+      <p style="margin-top:15px;color:white;margin-bottom:0px;margin-left:4px">
+        <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+        {{ orderTotal | currency:'USD':true }}
+      </p>
+      <span class="sub-text" style="font-size:75%;">current order</span>
+      <span popover="Your order has been updated!" triggers="" #orderPopover="bs-popover" placement="bottom"></span>
+    </div>
+  </div>
+  <div id="bottom">
+    <div class="navbar-left bottomNavItem" style="margin-left:120px;">
+      ABOUT US
+    </div>
+    <div class="navbar-left bottomNavItem">
+      LOCATIONS
+    </div>
+    <div
+      class="navbar-left bottomNavItem"
+      href="#menuPanel"
+      pageScroll
+      [pageScrollDuration]="300"
+      [pageScrollOffset]="65">
+      MENU
+    </div>
+  </div>
+</nav>
+
+<div bsModal #orderModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Current Order</h4>
+        <button type="button" class="close pull-right" (click)="hideOrderModal()" aria-label="Close">
+          <i class="fa fa-times-circle" aria-hidden="true" style="color:white"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row" *ngIf="currentOrder.length == 0" style="margin-left:15vw">
+          <p>Your order will appear here as you select items in the Watson order bot.</p>
+          <p>To get started, click the button on the top right to get ordering!</p>
+        </div>
+        <div *ngIf="currentOrder.length>0">
+          <p>Placed for {{ orderType }}</p>
+          <table style="margin-left:8.5vw">
+            <tr style="margin-bottom:5px">
+              <th>Item</th>
+              <th>Price</th>
+            </tr>
+            <tr *ngFor="let item of currentOrder" class="itemRow">
+              <td style="width:50vw">1 x {{ item.size }} {{ item.type }} {{ item.item }}<span *ngIf="item.options"> with {{ item.options }}</span> </td>
+              <td style="width:15vw">{{ item.cost | currency:'USD':true }}</td>
+            </tr>
+            <tr style="background-color:#F36666;border-top 2px solid black">
+              <td style="text-align:right;margin-right:20px">TOTAL</td>
+              <td><b>{{ orderTotal | currency:'USD':true }}</b></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

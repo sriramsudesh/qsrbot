@@ -1,0 +1,82 @@
+{
+  "burger": {
+    "price": 7.99,
+    "calories":"",
+    "allergens":"",
+  },
+  "smallpizza": {
+    "price": 9.99,
+    "calories":"",
+    "allergens":"",
+  },
+  "mediumpizza": {
+    "price": 13.99,
+    "calories":"",
+    "allergens":"",
+  },
+  "largepizza": {
+    "price": 16.99,
+    "calories":"",
+    "allergens":"",
+  },
+  "toppings": {
+    "price": 1.99,
+    "calories":"",
+    "allergens":"",
+  },
+  "tacos": {
+    "price": 8.99,
+    "calories":"",
+    "allergens":"",
+  },
+  "salad": {
+    "price": 7.99,
+    "calories":"",
+    "allergens":"",
+  },
+  "smallsoup": {
+    "price": 2.99,
+    "calories":"",
+    "allergens":"",
+  },
+  "mediumsoup": {
+    "price": 4.99,
+    "calories":"",
+    "allergens":"",
+  },
+  "largesoup": {
+    "price": 7.99,
+    "calories":"",
+    "allergens":"",
+  },
+  "sidesoup": {
+    "price": 3.99,
+    "calories":"",
+    "allergens":"",
+  },
+  "sidesalad": {
+    "price": 3.99,
+    "calories":"",
+    "allergens":"",
+  },
+  "smallfries": {
+    "price": 1.99,
+    "calories":"",
+    "allergens":"",
+  },
+  "mediumfries": {
+    "price": 2.99,
+    "calories":"",
+    "allergens":"",
+  },
+  "largefries": {
+    "price": 3.99,
+    "calories":"",
+    "allergens":"",
+  },
+  "icecream": {
+    "price": 3.99,
+    "calories":"",
+    "allergens":"",
+  }
+}

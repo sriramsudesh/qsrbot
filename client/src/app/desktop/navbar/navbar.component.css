@@ -1,0 +1,117 @@
+#top{
+  background:linear-gradient(-180deg, #CE3B3B 0%, #F76A6A 100%);
+  height:65px;
+}
+
+#bottom{
+  background-color:#ADA4A4;
+  height:35px;
+}
+
+.itemRow{
+  padding:10px;
+  border-bottom: 1px solid #ddd;
+  transition:
+    background-color .6s,
+    color .4s
+}
+
+td, th{
+  padding:10px;
+}
+
+.itemRow:hover{
+  background-color:gray;
+  color:white;
+  cursor:pointer;
+}
+
+.modal-header{
+  background:linear-gradient(-180deg, #CE3B3B 0%, #F76A6A 100%);
+}
+
+.modal-title{
+  font-family:HelveticaNeueIBMLight;
+  font-size:25px;
+}
+
+#orderBasket{
+  height:65px;
+  margin-right:15px;
+  font-size:16px;
+  transition:
+    background-color .6s,
+    color .4s
+  ;
+  padding-left: 7px;
+  padding-right: 7px;
+  cursor:pointer;
+}
+
+#orderBasket:hover{
+  background-color:#B70E0E;
+  color:white;
+}
+
+.customClass{
+  background-color:yellow;
+  color:red;
+}
+
+.alerted{
+  background-color:#B70E0E;
+  color:white;
+}
+
+#profile{
+  height:65px;
+  margin-right:15px !important;
+  font-size:16px;
+  transition:
+    background-color .6s,
+    color .4s
+  ;
+  padding-left: 7px;
+  padding-right: 7px;
+  cursor:pointer;
+}
+
+#profile:hover{
+  background-color:#B70E0E;
+  color:white;
+}
+
+.bottomNavItem{
+  transition:
+    background-color .6s,
+    color .4s,
+    box-shadow .6s,
+    -moz-box-shadow .6s,
+    -webkit-box-shadow .6s
+  ;
+  cursor:pointer;
+  min-width:135px;
+  text-align:center;
+  padding-top:8px;
+  padding-bottom:7px;
+}
+
+.bottomNavItem:hover{
+  /*background-color:#898484;*/
+  color:#B70E0E;
+  -webkit-box-shadow: inset 5px 5px 159px 0px rgba(250,250,250,1);
+  -moz-box-shadow: inset 5px 5px 159px 0px rgba(250,250,250,1);
+  box-shadow: inset 5px 5px 159px 0px rgba(250,250,250,1);
+}
+
+.navLogo{
+  max-width: 95px;
+  position:relative;
+  top:18px;
+  left:15px;
+}
+
+.modal-body{
+  font-family:HelveticaNeueIBMLight;
+  font-size:18px;
+}

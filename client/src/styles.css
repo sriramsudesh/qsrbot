@@ -1,0 +1,69 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/*IBM Custom Fonts */
+@font-face {
+    font-family: HelveticaNeueIBMRoman;
+    src: url('assets/fonts/IBMFONTS/HelvNeueRomanforIBM.woff') format('woff'), url('assets/fonts/IBMFONTS/HelvNeueRomanforIBM.ttf') format('ttf'), url('assets/fonts/IBMFONTS/HelvNeueRomanforIBM.otf') format('otf');
+}
+@font-face {
+    font-family: HelveticaNeueIBMLight;
+    src: url('assets/fonts/IBMFONTS/HelvNeueLightforIBM.woff') format('woff'), url('assets/fonts/IBMFONTS/HelvNeueLightforIBM.ttf') format('ttf'), url('assets/fonts/IBMFONTS/HelvNeueLightforIBM.otf') format('otf');
+}
+@font-face {
+    font-family: HelveticaNeueIBMItalic;
+    src: url('assets/fonts/IBMFONTS/HelvNeueMediumItalicforIBM.woff') format('woff'), url('assets/fonts/IBMFONTS/HelvNeueMediumItalicforIBM.ttf') format('ttf')
+}
+
+.contentTitle{
+  font-family:HelveticaNeueIBMRoman;
+  font-size:17px;
+  color:#B70E0E;
+  line-height: 95%;
+  margin-top:20px;
+}
+
+.themeImg{
+  width:100%;
+  margin-right:20px;
+}
+
+.themeImgL{
+  max-height:175px;
+  max-width:300px;
+  float:left;
+  margin-left:20px;
+  position:relative;
+  top:35px;
+}
+
+.shadow {
+    display:block;
+    position:relative;
+}
+
+.shadow:before {
+    display:block;
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+    -moz-box-shadow:inset 0px 0px 6px 6px #FFFFFF;
+    -webkit-box-shadow:inset 0px 0px 6px 6px #FFFFFF;
+    box-shadow:inset 0px 0px 6px 6px #FFFFFF;
+}
+
+.subtitle{
+  font-family:HelveticaNeueIBMRoman;
+  font-size:18px;
+  color:#B70E0E;
+  line-height: 95%;
+  text-align:center;
+  margin-top:0px;
+  position:relative;
+  top:-32px;
+  background-color:white;
+  display:inline-block;
+  padding-left:7px;
+  padding-right:7px;
+}

@@ -1,0 +1,21 @@
+<div class="row" id="info">
+  <div *ngIf="weatherData.zip">
+    <div style="float:left;" class="info-text">Watson Food Ordering</div>
+    <div *ngIf="!weatherData.weatherCurrent">
+      <i class="fa fa-spinner fa-pulse fa-fw" style="color:white;float:right"></i>
+    </div>
+    <div *ngIf="weatherData.weatherCurrent">
+      <div style="float:right;margin-left:20px;margin-right:10px;"><i class="fa fa-thermometer-three-quarters" aria-hidden="true" style="margin-right:6px;"></i>{{ weatherData.weatherCurrent.observation.temp }}&deg;</div>
+      <div style="float:right"><i class="fa fa-map-marker" aria-hidden="true" style="margin-right:6px;"></i>{{ weatherData.zip }}</div>
+    </div>
+  </div>
+  <div *ngIf="!weatherData.zip">
+    <div style="float:left;" class="info-text">Enter your zip code to get munching!</div>
+  </div>
+</div>
+<div class="row" id="scrolling-chat-box">
+  <wsl-chat-bubble *ngFor='let message of convoArray' [message]="message" (zip)="zipReceived($event)"></wsl-chat-bubble>
+</div>
+<div *ngIf="allowInput" class="row" id="input">
+  <wsl-chat-input (sendMessage)="postMessage($event)" (textPresent)="postPending($event)" id="input_box"></wsl-chat-input>
+</div>

@@ -1,0 +1,53 @@
+<div *ngIf="message.type==='conversation'" [@flyIn]="message.speaker">
+	<p
+	[ngClass]=
+		"{ watsontext: message.speaker==='watson',
+			 humantext: message.speaker==='human',
+			 anger: message.emotion==='frustrated' && message.emoStrong || message.emotion==='impolite' && message.emoStrong,
+		   sadness: message.emotion==='sad' && message.emoStrong}">
+			{{ message.message }}
+	</p>
+	<div class="row" *ngIf="message.emotion==='frustrated'  && message.emoStrong || message.emotion==='impolite'  && message.emoStrong" class="emotionBar">
+		<i class="fa fa-exclamation-circle" aria-hidden="true" tooltip="{{ message.emoConfidence | percent: '1.0-2'}} {{ message.emotion }}"></i>
+	</div>
+	<div class="row" *ngIf="message.emotion==='sad' && message.emoStrong" class="emotionBar">
+		<i class="fa fa-info-circle" aria-hidden="true" tooltip="{{ message.emoConfidence | percent: '1.0-2'}} {{ message.emotion }}"></i>
+	</div>
+</div>
+<div *ngIf="message.type==='prompt'" [ngClass]="{ watsontext: message.speaker==='watson', humantext: message.speaker==='human'}" [@flyIn]="message.speaker">
+	<p>{{ message.message }}</p>
+	<div *ngIf="!zipSet">
+		<form [formGroup]="zipForm" (ngSubmit)="setZip()">
+			<fieldset>
+				<div class="form-group">
+					<br>
+					<div class="col-lg-12">
+						<input type="text" class="form-control" id="subjectInput" formControlName="zip" placeholder="US Zip e.g. 08550">
+						<label for="select" class="control-label sub-text" style="float:right;font-size:95%" >Enter your zip here</label>
+					</div>
+				</div>
+				<div *ngIf="zipError">
+					Please enter a valid 5 digit zip
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</div>
+<div *ngIf="message.type==='showMap'" [ngClass]="{ watsontext: message.speaker==='watson', humantext: message.speaker==='human'}" [@flyIn]="message.speaker">
+	<p>{{ message.message }}</p>
+	<iframe
+		width="185"
+		height="200"
+		frameborder="0" style="border:0"
+		src="https://www.google.com/maps/embed/v1/place?key=AIzaSyArgg97Dj-6C7Ndrhpc_P_vbrDagaAFNr4&q=burgers,Princeton+NJ" allowfullscreen>
+	</iframe>
+	<p>Open till 8pm today</p>
+	<p>609-240-7080</p>
+</div>
+<div *ngIf="message.type==='showGif'" [ngClass]="{ watsontext: message.speaker==='watson', humantext: message.speaker==='human'}" [@flyIn]="message.speaker">
+	<p>{{ message.message }}</p>
+	<img src="assets/cat_giphy.gif" style="max-width:185px;max-height:200px">
+</div>
+<div *ngIf="zipSet" class="humantext" [@flyIn]="human">
+	{{ zipForm.value.zip }}
+</div>
